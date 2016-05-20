@@ -1,0 +1,11 @@
+<h1>Euro to US dollars converter</h1>
+<%= form_tag(root_path, method: :get) do %>
+    <label for="amount">Amount:</label>
+    <input type="text" name="amount" value="<%= @amount %>" /><br />
+
+    <label for="amount">Date:</label>
+    <input type="text" name="date" value="<%= @date.to_s(:db) %>" /><br />
+    <input type="submit" value="Convert" /><br />
+
+    <%= @amount %> euros is equal to <%= @usd %> USD on <%= l(@date) %>
+<% end %>
